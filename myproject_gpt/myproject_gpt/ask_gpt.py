@@ -51,6 +51,7 @@ def ask_gpt(request):
         }
 
         response = requests.post(url, headers=headers, json=prompt)
+
         # Преобразование ответа в JSON
         result_json = response.json()
 
@@ -67,6 +68,7 @@ def ask_gpt(request):
 
         # Извлечение строки с цветами
         color_string = result_json['result']['alternatives'][0]['message']['text']
+
         # Удаление обратных слешей
         cleaned_color_string = color_string.replace('\\', '')
         # Преобразование строки обратно в список цветов

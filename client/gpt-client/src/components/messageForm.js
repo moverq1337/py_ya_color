@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../main.css'
 
 const MessageForm = () => {
  const [word, setWord] = useState('');
@@ -15,7 +16,8 @@ const MessageForm = () => {
         body: JSON.stringify({ word }),
       });
       if (!response.ok) {
-        throw new Error('Ошибка при отправке сообщения');
+       //var err = throw new Error('Ошибка при отправке сообщения');
+       alert('К сожалению мы не можем определить цвет для данного слова')
       }
       const data = await response.json();
       console.log(data);
@@ -28,8 +30,8 @@ const MessageForm = () => {
 
  const applyColors = () => {
    return colors.map((color, index) => (
-     <div key={index} style={{ backgroundColor: color, height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '24px', width: "100%" }}>
-       Цвет {index + 1}
+     <div key={index} style={{ color:"", backgroundColor: color, height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '24px', width: "100%" }}>
+        <p id="colors">Цвет {color}</p>
      </div>
    ));
  };
