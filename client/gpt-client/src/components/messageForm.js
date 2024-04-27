@@ -47,7 +47,7 @@ const MessageForm = () => {
         />
         <button type="submit" style={{ padding: '8px 16px' }}>Отправить</button>
       </form>
-      <div style={{display:"flex", zIndex:"0", justifyContent="space-between"}}>
+      <div style={{display:"flex", zIndex:"0"}}>
         {applyColors()}
       </div>
     </div>
