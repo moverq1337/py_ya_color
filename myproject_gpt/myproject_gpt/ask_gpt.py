@@ -11,7 +11,7 @@ def ask_gpt(request):
         word = data.get('word', '')
 
         prompt = {
-            "modelUri": "gpt://b1gru9939vg1dpodhqkh/yandexgpt-pro",
+            "modelUri": "gpt://b1gru9939vg1dpodhqkh/yandexgpt",
             "completionOptions": {
                 "stream": False,
                 "temperature": 0.6,
